@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Website</title>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background: linear-gradient(to right, #4facfe, #00f2fe);
+padding:50px;
+color:white;
+}
+
+h1{
+font-size:40px;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+background:white;
+color:#333;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#f1f1f1;
+}
+
+#fact{
+margin-top:30px;
+font-size:24px;
+background:rgba(0,0,0,0.2);
+padding:20px;
+border-radius:10px;
+display:inline-block;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Random Fun Facts 🌍</h1>
+
+<p>Click the button to discover an amazing fact!</p>
+
+<button onclick="showFact()">Show Fun Fact</button>
+
+<p id="fact"></p>
+
+<script>
+
+const facts = [
+"Honey never spoils 🍯",
+"Octopuses have three hearts ❤️",
+"Bananas are technically berries 🍌",
+"The human brain is 73% water 💧",
+"Sharks existed before trees 🦈"
+];
+
+function showFact(){
+let random = Math.floor(Math.random()*facts.length);
+document.getElementById("fact").innerText = facts[random];
+}
+
+</script>
+
+</body>
+</html>
